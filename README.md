@@ -19,7 +19,7 @@ pip install -r requirements.txt
 
 - `scan_path`: 打包器扫描的目录
 - `output`: 打包器输出的目录
-- `upload_method`: 上传到远程服务器的方式, 目前支持`sftp`和`none`
+- `upload_method`: 上传到远程服务器的方式, 目前支持`sftp`和`none`, `none`表示不上传
 - `upload_info`: 上传到远程服务器的信息字典
   - `sftp`: sftp服务器信息
     - 自定义的服务器profile, 但必须要有一个叫`default`的profile
