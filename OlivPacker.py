@@ -55,34 +55,14 @@ def validate_config():
 							}
 						}
 					}""")
-		exit(message + "已重新创建配置文件, 请修改之后进行使用")
+		exit(message)
 
 	if not config.exists():
-		with open(config, "w+", encoding="utf-8") as f:
-			f.write("""{
-		"output": "./output",
-		"scan_path": [
-			"./"
-		],
-		"upload_method": "none",
-		"upload_info": {
-			"ssh": {
-				"default": {
-					"host": "",
-					"user": "",
-					"port": 22,
-					"passwd": "",
-					"identity_path": "",
-					"dest": "/absolute/path/to/plugin/folder"
-				}
-			}
-		}
-	}""")
-			exit(f"配置文件不存在, 已创建默认配置文件({root}/packing.json), 请修改之后使用")
+		new_config_file(f"配置文件不存在, 已创建默认配置文件({root}/packing.json), 请修改之后使用")
 	try:
 		config = loads(open(config, "r", encoding="utf-8").read())
 	except JSONDecodeError:
-		new_config_file("原配置文件已损坏, 无法读取")
+		new_config_file("原配置文件已损坏, 无法读取, 已重新创建配置文件, 请修改之后使用")
 
 
 def load_package_json(package_json_list: list, scan_path: list):
