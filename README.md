@@ -19,9 +19,9 @@ pip install -r requirements.txt
 
 - `scan_path`: 打包器扫描的目录列表
 - `output`: 打包器打包完成opk输出的目录
-- `upload_method`: 上传到远程服务器的方式, 目前支持`sftp`和`none`, `none`表示不上传
+- `upload_method`: 上传到远程服务器的方式, 目前支持`ssh`(即使用sftp上传)和`none`, `none`表示不上传
 - `upload_info`: 上传到远程服务器的信息字典
-  - `sftp`: sftp服务器信息
+  - `ssh`: sftp服务器信息
     - 自定义的服务器profile, 不允许拥有重复的profile名
       - `host`: sftp服务器地址
       - `port`: sftp服务器端口
