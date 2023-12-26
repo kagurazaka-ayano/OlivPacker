@@ -2,7 +2,7 @@ altgraph==0.17.3
 bcrypt==4.0.1
 cffi==1.15.1
 coloredlogs==15.0.1
-cryptography==41.0.4
+cryptography==41.0.6
 flatbuffers==23.5.26
 humanfriendly==10.0
 macholib==1.16.2
